@@ -3,23 +3,31 @@ import Cabecera from './components/Cabecera'
 import './App.css';
 
 class App extends Component {
+    state = {
+        miau: 'Bienvenido a miau'
+    }
+    cambiarTextoDelEstado = () => {
+        this.setState({ miau: 'Hola mundo' })
+        console.log('Voy Bien')
+    }
     manejaClick = texto => {
         console.log(texto)
     }
     render() {
-        const miau = 'Bienvenido miau'
+        const { miau } = this.state
+        const texto = 'Bienvenido miau'
         const guau = 'Bienvenido guau'
         return ( <
             div className = "App" >
             <
-            Cabecera miau = { miau }
+            Cabecera miau = { texto }
             manejaClick = { this.manejaClick }
             />  <
             Cabecera miau = { guau }
             manejaClick = { this.manejaClick }
             /><
-            p className = "App-intro" >
-            Hola mundo <
+            p onClick = { this.cambiarTextoDelEstado }
+            className = "App-intro" > { miau } <
             /p> < /
             div >
         );
