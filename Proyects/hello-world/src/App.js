@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Cabecera from './components/Cabecera'
 import './App.css';
 
 class App extends Component {
@@ -7,14 +7,8 @@ class App extends Component {
         return ( <
             div className = "App" >
             <
-            header className = "App-header" >
+            Cabecera / >
             <
-            img src = { logo }
-            className = "App-logo"
-            alt = "logo" / >
-            <
-            h1 className = 'App-title' > Bienvenido a React < /h1>  < /
-            header > <
             p className = "App-intro" >
             Hola mundo <
             /p> < /
