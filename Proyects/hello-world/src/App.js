@@ -17,20 +17,15 @@ class App extends Component {
     }
     render() {
         const { miau } = this.state
-        const texto = 'Bienvenido miau'
-        const guau = 'Bienvenido guau'
+        const texto = 'Bienvenido a miau'
         return ( <
             div className = "App" >
             <
             Cabecera miau = { texto }
             manejaClick = { this.manejaClick }
-            />  <
-            Cabecera miau = { guau }
-            manejaClick = { this.manejaClick }
             /> <
-            p > { miau } <
-            /p> <
-            /
+            p onClick = { this.cambiarTextoDelEstado } > { miau } <
+            /p> < /
             div >
         );
     }
