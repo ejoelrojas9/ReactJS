@@ -1,5 +1,23 @@
 import React, { Component } from 'react'
 import logo from '../logo.svg';
+/*
+.App-header {
+    background-color: #282c34;
+    height: 150px;
+    padding: 40px;
+    color: white;
+}
+*/
+
+const styles = {
+    header: {
+        backgroundColor: '#282c34',
+        height: '150px',
+        padding: '40px',
+        color: 'white'
+    }
+
+}
 
 export default class Cabecera extends Component {
     manejaClick = () => {
@@ -9,7 +27,7 @@ export default class Cabecera extends Component {
     render() {
         const { manejaClick, miau } = this.props
         return ( <
-            header className = "App-header" >
+            header style = { styles.header } >
             <
             img onClick = { manejaClick }
             onClick = { this.manejaClick }
