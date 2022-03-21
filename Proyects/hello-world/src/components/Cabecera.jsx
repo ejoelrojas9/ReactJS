@@ -1,28 +1,21 @@
 import React, { Component } from 'react'
-import logo from '../logo.svg';
-/*
-.App-header {
-    background-color: #282c34;
-    height: 150px;
-    padding: 40px;
-    color: white;
-}
-*/
+import logo from '../logo.svg'
+import H1 from './H1'
 
 const styles = {
     header: ({ backgroundColor }) => ({
         backgroundColor,
         height: '150px',
         padding: '40px',
-        color: 'white'
+        color: 'white',
     })
-
 }
 
 export default class Cabecera extends Component {
     state = {
         backgroundColor: '#222',
     }
+
     cambiaColorHeader = () => {
         this.setState({ backgroundColor: '#f00' })
     }
@@ -31,9 +24,11 @@ export default class Cabecera extends Component {
         const { manejaClick, miau } = this.props
         manejaClick(miau)
     }
+
     render() {
         const { manejaClick, miau } = this.props
         const { backgroundColor } = this.state
+
         return ( <
             header onClick = { this.cambiaColorHeader }
             style = { styles.header({ backgroundColor }) } >
@@ -43,8 +38,8 @@ export default class Cabecera extends Component {
             className = "App-logo"
             alt = "logo" / >
             <
-            h1 className = "App-title" > { miau } < /h1> <
-            /header>
+            H1 > { miau } < /H1>  <
+            /header >
         )
     }
 }
